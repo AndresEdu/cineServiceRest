@@ -3,7 +3,12 @@
  */
 package com.itq.cineService.endpoint;
 
+import java.util.Date;
+
 import javax.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +30,10 @@ import com.itq.cineService.dto.Sala;
 @RestController
 public class CineServiceController {
 
+	private final Logger logger  = LoggerFactory.getLogger(this.getClass());
+    Date date = new Date();
+
+	
 	@GetMapping("/cine/sala")
 	public Sala readSala(@RequestParam(name = "id") String id)
 	{
@@ -33,6 +42,10 @@ public class CineServiceController {
 		sala.setCantFilas(3);
 		sala.setEstado("Disponible");
 		sala.setIdSala(Integer.parseInt(id));
+		
+		logger.debug("Se ha leido la sala con el id: " + id);
+		logger.info("La sala con el ID: "+id+" Fecha:  "+ date );
+		logger.error("No se pudo leer la sala");
 		
 		return sala;
 	}
@@ -49,6 +62,10 @@ public class CineServiceController {
 		funcion.setIdPelicula(1);
 		funcion.setIdSala(Integer.parseInt(id));
 		
+		logger.debug("Se ha leido la funcion con el id: " + id);
+		logger.info("La funcion con el ID: "+id+" Fecha:  "+ date );
+		logger.error("No se pudo leer la funcion");
+		
 		return funcion;
 	}
 	@PostMapping(value = "/cine/sala", consumes = ("application/json"), produces = ("application/json"))
@@ -58,6 +75,9 @@ public class CineServiceController {
 
 		ack.setCode(0);
 		ack.setDescripcion("Sala creada");
+		logger.debug("Se ha creado la sala exitosamente");
+		logger.info("La sala se ha creado con exito. Fecha:  "+ date );
+		logger.error("No se pudo crear la sala");
 		
 		return ack;
 	}
@@ -69,6 +89,9 @@ public class CineServiceController {
 
 		ack.setCode(0);
 		ack.setDescripcion("Funcion creada");
+		logger.debug("Se ha creado la funcion exitosamente");
+		logger.info("La funcion se ha creado con exito. Fecha:  "+ date );
+		logger.error("No se pudo crear la funcion");
 		
 		return ack;
 	}
@@ -80,6 +103,9 @@ public class CineServiceController {
 
 		ack.setCode(0);
 		ack.setDescripcion("Estado modificado");
+		logger.debug("Se ha modificado el estado de la funcion exitosamente");
+		logger.info("La funcion se ha modificado con exito. Fecha:  "+ date );
+		logger.error("No se pudo modificar el estado de la funcion ");
 		
 		return ack;
 	}
