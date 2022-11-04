@@ -9,6 +9,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+
 /**
  * @author edugo
  *
@@ -72,12 +73,11 @@ public class Funcion {
 	private int idSala;
 	
 	@NotEmpty
-	@NotNull
-	@Min(1)	
+	@NotNull		
 	private float costoBoleto;
 	
 	@NotEmpty
-	@NotNull
+	@NotNull	
 	private String estado;
 	
 	

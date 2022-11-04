@@ -33,8 +33,8 @@ public class Sala {
 
 	@NotEmpty
 	@NotNull
-	@Max(3)
 	@Min(1)
+	@Max(3)
 	private int idSala;
 	
 	@NotEmpty

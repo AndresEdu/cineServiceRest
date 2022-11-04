@@ -44,8 +44,7 @@ public class CineServiceController {
 		sala.setIdSala(Integer.parseInt(id));
 		
 		logger.debug("Se ha leido la sala con el id: " + id);
-		logger.info("La sala con el ID: "+id+" Fecha:  "+ date );
-		logger.error("No se pudo leer la sala");
+		logger.info("La sala con el ID: "+id+" se ha creado con exito. Fecha:  "+ date );		
 		
 		return sala;
 	}
@@ -63,8 +62,7 @@ public class CineServiceController {
 		funcion.setIdSala(Integer.parseInt(id));
 		
 		logger.debug("Se ha leido la funcion con el id: " + id);
-		logger.info("La funcion con el ID: "+id+" Fecha:  "+ date );
-		logger.error("No se pudo leer la funcion");
+		logger.info("La funcion con el ID: "+id+" se ha creado con exito. Fecha:  "+ date );		
 		
 		return funcion;
 	}
@@ -74,10 +72,9 @@ public class CineServiceController {
 		Ack ack = new Ack();
 
 		ack.setCode(0);
-		ack.setDescripcion("Sala creada");
+		ack.setDescripcion("Sala creada, ID: "+sala.getIdSala());
 		logger.debug("Se ha creado la sala exitosamente");
-		logger.info("La sala se ha creado con exito. Fecha:  "+ date );
-		logger.error("No se pudo crear la sala");
+		logger.info("La sala se ha creado con exito. ID:" +sala.getIdSala()+", Fecha:  "+ date );		
 		
 		return ack;
 	}
@@ -90,13 +87,12 @@ public class CineServiceController {
 		ack.setCode(0);
 		ack.setDescripcion("Funcion creada");
 		logger.debug("Se ha creado la funcion exitosamente");
-		logger.info("La funcion se ha creado con exito. Fecha:  "+ date );
-		logger.error("No se pudo crear la funcion");
+		logger.info("La funcion se ha creado con exito. ID: "+funcion.getIdFuncion()+", Fecha:  "+ date );		
 		
 		return ack;
 	}
 	
-	@PutMapping(value = "/cine/putEstado", consumes = ("application/json"), produces = ("application/json"))
+	@PutMapping(value = "/cine/funcion/estado", consumes = ("application/json"), produces = ("application/json"))
 	public Ack putEstadoFuncion(@Valid @RequestBody Funcion funcion)
 	{
 		Ack ack = new Ack();
@@ -104,8 +100,7 @@ public class CineServiceController {
 		ack.setCode(0);
 		ack.setDescripcion("Estado modificado");
 		logger.debug("Se ha modificado el estado de la funcion exitosamente");
-		logger.info("La funcion se ha modificado con exito. Fecha:  "+ date );
-		logger.error("No se pudo modificar el estado de la funcion ");
+		logger.info("La funcion se ha modificado con exito. ID: "+funcion.getIdFuncion()+", Fecha:  "+ date );		
 		
 		return ack;
 	}
