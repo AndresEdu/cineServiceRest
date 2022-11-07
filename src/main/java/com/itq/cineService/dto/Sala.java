@@ -31,19 +31,16 @@ import javax.validation.constraints.NotNull;
  */
 public class Sala {
 
-	@NotEmpty
 	@NotNull
 	@Min(1)
 	@Max(3)
 	private int idSala;
 	
-	@NotEmpty
 	@NotNull
 	@Max(10)
 	@Min(1)	
 	private int cantFilas;
 	
-	@NotEmpty
 	@NotNull
 	@Max(10)
 	@Min(1)	

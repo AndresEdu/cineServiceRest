@@ -48,7 +48,7 @@ import javax.validation.constraints.Pattern;
  */
 public class Funcion {
 	
-	@NotEmpty
+	
 	@NotNull
 	private int idFuncion;
 	
@@ -62,17 +62,17 @@ public class Funcion {
 	@Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$")
 	private String hora;
 	
-	@NotEmpty
+	
 	@NotNull
 	private int idPelicula;
+
 	
-	@NotEmpty
 	@NotNull
 	@Max(3)
 	@Min(1)	
 	private int idSala;
 	
-	@NotEmpty
+	
 	@NotNull		
 	private float costoBoleto;
 	

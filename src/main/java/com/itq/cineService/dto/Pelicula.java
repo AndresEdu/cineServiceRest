@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
  */
 public class Pelicula {
 	
-	@NotEmpty
+	
 	@NotNull
 	private int idPelicula;
 	
@@ -22,7 +22,7 @@ public class Pelicula {
 	@NotNull
 	private String nombre;
 	
-	@NotEmpty
+	
 	@NotNull
 	@Max(200)
 	@Min(60)	
