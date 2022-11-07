@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 public class Ack {
 	
 	
-	@NotEmpty
+	
 	@NotNull
 	private int code;
 	
