@@ -3,6 +3,10 @@
  */
 package com.itq.cineService.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -29,25 +33,33 @@ import javax.validation.constraints.NotNull;
 	</xs:element>
 	
  */
+
+@Entity()
+@Table(name = "Sala")
 public class Sala {
 
+	@Id
 	@NotNull
 	@Min(1)
 	@Max(3)
+	@Column(name="idSala")
 	private int idSala;
 	
 	@NotNull
-	@Max(10)
 	@Min(1)	
+	@Max(10)
+	@Column(name="cantFilas")
 	private int cantFilas;
 	
 	@NotNull
-	@Max(10)
 	@Min(1)	
+	@Max(10)
+	@Column(name="cantColumnas")
 	private int cantColumnas;
 	
 	@NotEmpty
 	@NotNull
+	@Column(name="estado")
 	private String estado;
 	/**
 	 * @return the idSala

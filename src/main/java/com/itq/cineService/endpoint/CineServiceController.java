@@ -9,7 +9,7 @@ import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.itq.cineService.dto.Ack;
 import com.itq.cineService.dto.Funcion;
 import com.itq.cineService.dto.Sala;
+import com.itq.cineService.repository.SalaRepository;
 
 
 /**
@@ -29,6 +30,8 @@ import com.itq.cineService.dto.Sala;
 
 @RestController
 public class CineServiceController {
+	@Autowired
+	SalaRepository salaRespository;
 
 	private final Logger logger  = LoggerFactory.getLogger(this.getClass());
     Date date = new Date();
@@ -37,11 +40,7 @@ public class CineServiceController {
 	@GetMapping("/cine/sala")
 	public Sala readSala(@RequestParam(name = "id") String id)
 	{
-		Sala sala = new Sala();
-		sala.setCantColumnas(3);
-		sala.setCantFilas(3);
-		sala.setEstado("Disponible");
-		sala.setIdSala(Integer.parseInt(id));
+		Sala sala = salaRespository.findById(Integer.parseInt(id)).get();
 		
 		logger.debug("Se ha leido la sala con el id: " + id);
 		logger.info("La sala con el ID: "+id+" se ha creado con exito. Fecha:  "+ date );		
