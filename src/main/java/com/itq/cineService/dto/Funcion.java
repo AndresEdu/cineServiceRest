@@ -3,6 +3,10 @@
  */
 package com.itq.cineService.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -46,38 +50,47 @@ import javax.validation.constraints.Pattern;
 		</xs:complexType>
 	</xs:element>
  */
+
+@Entity()
+@Table(name = "Funcion")
 public class Funcion {
 	
-	
-	@NotNull
+	@Id
+	@Column(name="idFuncion")
 	private int idFuncion;
 	
 	@NotEmpty
 	@NotNull
-	@Pattern(regexp = "^([0-9]{2}[/][0-9]{2}[/][0-9]{4})")
+	@Pattern(regexp = "^([0-9]{4}[-][0-9]{2}[-][0-9]{2})")
+	@Column(name="fecha")
 	private String fecha;
 	
 	@NotEmpty
 	@NotNull
 	@Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$")
+	@Column(name="hora")
 	private String hora;
 	
 	
 	@NotNull
+	@Column(name="idPelicula")
 	private int idPelicula;
 
 	
 	@NotNull
 	@Max(3)
 	@Min(1)	
+	@Column(name="idSala")
 	private int idSala;
 	
 	
 	@NotNull		
+	@Column(name="costoBoleto")
 	private float costoBoleto;
 	
 	@NotEmpty
 	@NotNull	
+	@Column(name="estado")
 	private String estado;
 	
 	

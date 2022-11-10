@@ -39,7 +39,6 @@ import javax.validation.constraints.NotNull;
 public class Sala {
 
 	@Id
-	@NotNull
 	@Min(1)
 	@Max(3)
 	@Column(name="idSala")
