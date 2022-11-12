@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.itq.cineService.dto.Ack;
+import com.itq.cineService.dto.EstadoFuncionBody;
 import com.itq.cineService.dto.Funcion;
 import com.itq.cineService.dto.Sala;
 import com.itq.cineService.repository.*;
@@ -85,16 +86,27 @@ public class CineServiceController {
 	}
 
 	@PutMapping(value = "/cine/funcion/estado", consumes = ("application/json"), produces = ("application/json"))
-	public Ack putEstadoFuncion(@Valid @RequestBody Funcion funcion, @RequestParam(name = "id") String id) {
+	public Ack putEstadoFuncion(@Valid @RequestBody EstadoFuncionBody funcion)
+	{
 		Ack ack = new Ack();
-		/*
-		 * int idFuncion = Integer.parseInt(id); Funcion funcion =
-		 * funcionRepository.findById(idFuncion).get(); funcionRepository.save(funcion);
-		 * ack.setCode(0); ack.setDescripcion("Estado modificado");
-		 * logger.debug("Se ha modificado el estado de la funcion exitosamente");
-		 * logger.info("La funcion se ha modificado con exito. ID: "+funcion.
-		 * getIdFuncion()+", Fecha:  "+ date );
-		 */
+		
+		if(funcionRepository.existsById(funcion.getId()))
+		{
+			funcionRepository.setEstadoFuncionById(funcion.getEstado(), funcion.getId());
+			ack.setCode(200);
+			ack.setDescripcion("Estado modificado");
+			logger.debug("ID funcion:"+ funcion.getId()+"nuevo estado: "+funcion.getEstado().toString());
+			logger.info("La funcion con ID: "+ funcion.getId()+" se ha modificado con exito., Fecha:  "+ date );			
+		}
+		else
+		{			
+			logger.debug("ID función:"+ funcion.getId()+"nuevo estado: "+funcion.getEstado().toString());
+			logger.error("La función con ID: "+ funcion.getId()+" no existe, Fecha: "+ date);
+			logger.info("Error al actualizar función, Fecha:  "+ date );
+			ack.setCode(400);
+			ack.setDescripcion("No existe una función con ese ID");			
+		}
+		
 		return ack;
 	}
 }
