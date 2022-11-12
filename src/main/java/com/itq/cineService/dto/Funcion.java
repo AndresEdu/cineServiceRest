@@ -5,6 +5,8 @@ package com.itq.cineService.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
@@ -17,38 +19,6 @@ import javax.validation.constraints.Pattern;
 /**
  * @author edugo
  *
- *
- *<xs:element name="funcionCreator">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Funcion" type="tns:Funcion" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
-	<xs:element name="funcionReader">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="idFuncion" type="xs:int" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
-	<xs:element name="estadoFuncion">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="idFuncion" type="xs:int" />
-				<xs:element name="estado">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:enumeration value="disponible" />
-							<xs:enumeration value="llena" />
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
  */
 
 @Entity()
@@ -61,7 +31,7 @@ public class Funcion {
 	
 	@NotEmpty
 	@NotNull
-	@Pattern(regexp = "^([0-9]{4}[-][0-9]{2}[-][0-9]{2})")
+	@Pattern(regexp = "^([0-9]{4}[-][0-9]{2}[-][0-9]{2})$")
 	@Column(name="fecha")
 	private String fecha;
 	
@@ -88,10 +58,10 @@ public class Funcion {
 	@Column(name="costoBoleto")
 	private float costoBoleto;
 	
-	@NotEmpty
 	@NotNull	
 	@Column(name="estado")
-	private String estado;
+	@Enumerated(EnumType.STRING)
+	private estadoFuncion estado;
 	
 	
 	/**
@@ -169,13 +139,13 @@ public class Funcion {
 	/**
 	 * @return the estado
 	 */
-	public String getEstado() {
+	public estadoFuncion getEstado() {
 		return estado;
 	}
 	/**
 	 * @param estado the estado to set
 	 */
-	public void setEstado(String estado) {
+	public void setEstado(estadoFuncion estado) {
 		this.estado = estado;
 	}
 

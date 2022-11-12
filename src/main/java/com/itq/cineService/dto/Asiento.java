@@ -3,6 +3,12 @@
  */
 package com.itq.cineService.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -13,33 +19,40 @@ import javax.validation.constraints.Pattern;
  * @author edugo
  *
  */
+@Entity()
+@Table(name = "Asiento")
 public class Asiento {
 	
-	@NotEmpty
-	@NotNull
-	private String estado;
-	
+	@Id
 	@NotEmpty
 	@NotNull
 	@Pattern(regexp = "^([A-F]{1}[0-9][0-9]?)$")
+	@Column(name="idAsiento")
 	private String idAsiento;
+	
+	@NotNull
+	@Column(name="estado")
+	@Enumerated(EnumType.STRING)
+	private estadoSala estado;
+	
 	
 	@NotEmpty
 	@NotNull
 	@Max(3)
 	@Min(1)
-	private String idSala;
+	@Column(name="idSala")
+	private int idSala;
 	
 	/**
 	 * @return the estado
 	 */
-	public String getEstado() {
+	public estadoSala getEstado() {
 		return estado;
 	}
 	/**
 	 * @param estado the estado to set
 	 */
-	public void setEstado(String estado) {
+	public void setEstado(estadoSala estado) {
 		this.estado = estado;
 	}
 	/**
@@ -57,13 +70,13 @@ public class Asiento {
 	/**
 	 * @return the idSala
 	 */
-	public String getIdSala() {
+	public int getIdSala() {
 		return idSala;
 	}
 	/**
 	 * @param idSala the idSala to set
 	 */
-	public void setIdSala(String idSala) {
+	public void setIdSala(int idSala) {
 		this.idSala = idSala;
 	}
 	
