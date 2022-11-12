@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 public class EstadoFuncionBody {
 	
 	@NotNull
-	private int id;
+	private int idFuncion;
 	
 	@NotNull		
 	@Enumerated(EnumType.STRING)
@@ -22,12 +22,12 @@ public class EstadoFuncionBody {
 		this.estado = estado;
 	}
 
-	public int getId() {
-		return id;
+	public int getIdFuncion() {
+		return idFuncion;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdFuncion(int idFuncion) {
+		this.idFuncion = idFuncion;
 	}
 
 		
