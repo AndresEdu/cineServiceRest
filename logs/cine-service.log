@@ -5079,3 +5079,254 @@ Validation failed for argument [0] in public com.itq.cineService.dto.Ack com.itq
 2022-11-12 14:38:00.779  INFO 1472 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
 2022-11-12 14:38:00.793  INFO 1472 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
 >>>>>>> eabaa47 (Agrego error para esa exception)
+2022-11-12 14:41:43.935  INFO 19000 --- c.i.c.CineServiceRestApplicationTests          : Starting CineServiceRestApplicationTests using Java 18.0.2.1 on DESKTOP-IG2T4J4 with PID 19000 (started by edugo in C:\opt\wsSTS\cineServiceRest)
+2022-11-12 14:41:43.939  INFO 19000 --- c.i.c.CineServiceRestApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 14:41:45.495  INFO 19000 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 14:41:45.609  INFO 19000 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2022-11-12 14:41:46.485  INFO 19000 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 14:41:47.125  INFO 19000 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 14:41:47.202  INFO 19000 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 14:41:47.358  INFO 19000 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 14:41:47.705  INFO 19000 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 14:41:47.960  INFO 19000 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 14:41:48.771  INFO 19000 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 14:41:48.782  INFO 19000 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:41:49.823  WARN 19000 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 14:41:50.672  INFO 19000 --- c.i.c.CineServiceRestApplicationTests          : Started CineServiceRestApplicationTests in 7.201 seconds (JVM running for 8.321)
+2022-11-12 14:41:51.019  INFO 19000 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:41:51.021  INFO 19000 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 14:41:51.036  INFO 19000 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 14:46:47.472  INFO 3948 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 18.0.2.1 on DESKTOP-IG2T4J4 with PID 3948 (C:\opt\wsSTS\cineServiceRest\target\classes started by edugo in C:\opt\wsSTS\cineServiceRest)
+2022-11-12 14:46:47.476  INFO 3948 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 14:46:48.135  INFO 3948 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 14:46:48.189  INFO 3948 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+2022-11-12 14:46:48.706  INFO 3948 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 14:46:48.715  INFO 3948 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 14:46:48.716  INFO 3948 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 14:46:48.838  INFO 3948 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 14:46:48.839  INFO 3948 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1312 ms
+2022-11-12 14:46:48.962  INFO 3948 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 14:46:49.308  INFO 3948 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 14:46:49.354  INFO 3948 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 14:46:49.410  INFO 3948 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 14:46:49.633  INFO 3948 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 14:46:49.767  INFO 3948 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 14:46:50.405  INFO 3948 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 14:46:50.417  INFO 3948 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:46:50.824  WARN 3948 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 14:46:51.175  INFO 3948 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 14:46:51.183  INFO 3948 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 4.204 seconds (JVM running for 4.9)
+2022-11-12 14:48:16.255  INFO 3948 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 14:48:16.255  INFO 3948 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 14:48:16.256  INFO 3948 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 1 ms
+2022-11-12 14:48:16.371 ERROR 3948 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Solicitud JSON mal construida
+Solicitud JSON mal construida
+JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoFuncion` from String "disponible": not one of the values accepted for Enum class: [LLENA, DISPONIBLE]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoFuncion` from String "disponible": not one of the values accepted for Enum class: [LLENA, DISPONIBLE]
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 3, column: 15] (through reference chain: com.itq.cineService.dto.EstadoFuncionBody["estado"])
+2022-11-12 14:48:29.846  INFO 3948 --- c.i.c.endpoint.CineServiceController           : La funcion con ID: 0 se ha modificado con exito., Fecha:  Sat Nov 12 14:46:50 CST 2022
+2022-11-12 14:50:11.537  INFO 3948 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 14:50:11.556  INFO 3948 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 14:50:11.558  INFO 3948 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 14:50:11.568  INFO 3948 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:50:11.569  INFO 3948 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 14:50:11.581  INFO 3948 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 15:08:53.903  INFO 12432 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 18.0.2.1 on DESKTOP-IG2T4J4 with PID 12432 (C:\opt\wsSTS\cineServiceRest\target\classes started by edugo in C:\opt\wsSTS\cineServiceRest)
+2022-11-12 15:08:53.907  INFO 12432 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 15:08:54.514  INFO 12432 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 15:08:54.566  INFO 12432 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2022-11-12 15:08:55.080  INFO 12432 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 15:08:55.089  INFO 12432 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 15:08:55.089  INFO 12432 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 15:08:55.211  INFO 12432 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 15:08:55.212  INFO 12432 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1259 ms
+2022-11-12 15:08:55.349  INFO 12432 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 15:08:55.663  INFO 12432 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 15:08:55.706  INFO 12432 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 15:08:55.752  INFO 12432 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 15:08:55.964  INFO 12432 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 15:08:56.095  INFO 12432 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 15:08:56.705  INFO 12432 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 15:08:56.717  INFO 12432 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 15:08:57.108  WARN 12432 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 15:08:57.414  INFO 12432 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 15:08:57.421  INFO 12432 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 3.972 seconds (JVM running for 4.676)
+2022-11-12 15:09:06.707  INFO 12432 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 15:09:06.707  INFO 12432 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 15:09:06.709  INFO 12432 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 2 ms
+2022-11-12 15:09:06.962 ERROR 12432 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Id no encontrado en la base de datos
+Id no encontrado en la base de datos
+ID no valido
+2022-11-12 15:12:05.565  WARN 12432 --- o.h.engine.jdbc.spi.SqlExceptionHelper         : SQL Error: 1452, SQLState: 23000
+2022-11-12 15:12:05.565 ERROR 12432 --- o.h.engine.jdbc.spi.SqlExceptionHelper         : Cannot add or update a child row: a foreign key constraint fails (`rest_api`.`Funcion`, CONSTRAINT `Funcion_ibfk_2` FOREIGN KEY (`idPelicula`) REFERENCES `Pelicula` (`idPelicula`))
+2022-11-12 15:12:05.566  INFO 12432 --- o.h.e.jdbc.batch.internal.AbstractBatchImpl    : HHH000010: On release of batch it still contained JDBC statements
+2022-11-12 15:12:05.581 ERROR 12432 --- o.a.c.c.C.[.[.[/].[dispatcherServlet]          : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`rest_api`.`Funcion`, CONSTRAINT `Funcion_ibfk_2` FOREIGN KEY (`idPelicula`) REFERENCES `Pelicula` (`idPelicula`))
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.engine.jdbc.batch.internal.NonBatchingBatch.addToBatch(NonBatchingBatch.java:46)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3375)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3908)
+	at org.hibernate.action.internal.EntityInsertAction.execute(EntityInsertAction.java:107)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:604)
+	at org.hibernate.engine.spi.ActionQueue.lambda$executeActions$1(ActionQueue.java:478)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:475)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:344)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:40)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3303)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2438)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at jdk.proxy2/jdk.proxy2.$Proxy116.save(Unknown Source)
+	at com.itq.cineService.endpoint.CineServiceController.createFuncion(CineServiceController.java:80)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-11-12 15:13:37.404  INFO 12432 --- c.i.c.endpoint.CineServiceController           : La funcion se ha creado con exito. ID: 0, Fecha:  Sat Nov 12 15:08:56 CST 2022
+2022-11-12 15:14:12.154  INFO 12432 --- c.i.c.endpoint.CineServiceController           : La funcion se ha creado con exito. ID: 0, Fecha:  Sat Nov 12 15:08:56 CST 2022
+2022-11-12 15:15:13.549 ERROR 12432 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Id no encontrado en la base de datos
+Id no encontrado en la base de datos
+ID no valido
+2022-11-12 15:16:11.357 ERROR 12432 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Id no encontrado en la base de datos
+Id no encontrado en la base de datos
+ID no valido
+2022-11-12 15:16:20.341 ERROR 12432 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Id no encontrado en la base de datos
+Id no encontrado en la base de datos
+ID no valido
+2022-11-12 15:19:05.619 ERROR 12432 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Id no encontrado en la base de datos
+Id no encontrado en la base de datos
+ID no valido
+2022-11-12 15:19:09.981  INFO 12432 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 15:19:09.999  INFO 12432 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 15:19:10.001  INFO 12432 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 15:19:10.009  INFO 12432 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 15:19:10.011  INFO 12432 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 15:19:10.024  INFO 12432 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 15:19:17.455  INFO 14900 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 18.0.2.1 on DESKTOP-IG2T4J4 with PID 14900 (C:\opt\wsSTS\cineServiceRest\target\classes started by edugo in C:\opt\wsSTS\cineServiceRest)
+2022-11-12 15:19:17.458  INFO 14900 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 15:19:18.101  INFO 14900 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 15:19:18.157  INFO 14900 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+2022-11-12 15:19:18.712  INFO 14900 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 15:19:18.722  INFO 14900 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 15:19:18.722  INFO 14900 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 15:19:18.851  INFO 14900 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 15:19:18.851  INFO 14900 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1343 ms
+2022-11-12 15:19:18.977  INFO 14900 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 15:19:19.313  INFO 14900 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 15:19:19.362  INFO 14900 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 15:19:19.420  INFO 14900 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 15:19:19.653  INFO 14900 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 15:19:19.783  INFO 14900 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 15:19:20.421  INFO 14900 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 15:19:20.433  INFO 14900 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 15:19:20.872  WARN 14900 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 15:19:21.225  INFO 14900 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 15:19:21.234  INFO 14900 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 4.257 seconds (JVM running for 5.021)
+2022-11-12 15:19:28.812  INFO 14900 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 15:19:28.813  INFO 14900 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 15:19:28.817  INFO 14900 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 2 ms
+2022-11-12 15:22:18.497  INFO 14900 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 15:22:18.517  INFO 14900 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 15:22:18.519  INFO 14900 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 15:22:18.527  INFO 14900 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 15:22:18.528  INFO 14900 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 15:22:18.538  INFO 14900 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 15:22:25.567  INFO 1432 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 18.0.2.1 on DESKTOP-IG2T4J4 with PID 1432 (C:\opt\wsSTS\cineServiceRest\target\classes started by edugo in C:\opt\wsSTS\cineServiceRest)
+2022-11-12 15:22:25.571  INFO 1432 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 15:22:26.188  INFO 1432 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 15:22:26.244  INFO 1432 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2022-11-12 15:22:26.776  INFO 1432 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 15:22:26.798  INFO 1432 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 15:22:26.799  INFO 1432 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 15:22:26.903  INFO 1432 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 15:22:26.904  INFO 1432 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1273 ms
+2022-11-12 15:22:27.006  INFO 1432 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 15:22:27.319  INFO 1432 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 15:22:27.367  INFO 1432 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 15:22:27.420  INFO 1432 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 15:22:27.638  INFO 1432 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 15:22:27.754  INFO 1432 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 15:22:28.333  INFO 1432 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 15:22:28.345  INFO 1432 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 15:22:28.746  WARN 1432 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 15:22:29.078  INFO 1432 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 15:22:29.087  INFO 1432 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 3.965 seconds (JVM running for 4.597)
+2022-11-12 15:22:33.891  INFO 1432 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 15:22:33.892  INFO 1432 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 15:22:33.893  INFO 1432 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 1 ms
+2022-11-12 15:22:34.118 ERROR 1432 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Id no encontrado en la base de datos
+Id no encontrado en la base de datos
+ID no valido

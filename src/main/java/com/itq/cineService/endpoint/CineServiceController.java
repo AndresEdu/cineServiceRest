@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -86,10 +87,9 @@ public class CineServiceController {
 	}
 
 	@PutMapping(value = "/cine/funcion/estado", consumes = ("application/json"), produces = ("application/json"))
-	public Ack putEstadoFuncion(@Valid @RequestBody EstadoFuncionBody funcion)
+	public Ack putEstadoFuncion(@Valid @RequestBody EstadoFuncionBody funcion) throws NotValidIdException
 	{
 		Ack ack = new Ack();
-		
 		if(funcionRepository.existsById(funcion.getId()))
 		{
 			funcionRepository.setEstadoFuncionById(funcion.getEstado(), funcion.getId());
@@ -99,12 +99,8 @@ public class CineServiceController {
 			logger.info("La funcion con ID: "+ funcion.getId()+" se ha modificado con exito., Fecha:  "+ date );			
 		}
 		else
-		{			
-			logger.debug("ID función:"+ funcion.getId()+"nuevo estado: "+funcion.getEstado().toString());
-			logger.error("La función con ID: "+ funcion.getId()+" no existe, Fecha: "+ date);
-			logger.info("Error al actualizar función, Fecha:  "+ date );
-			ack.setCode(400);
-			ack.setDescripcion("No existe una función con ese ID");			
+		{
+			throw new NotValidIdException("ID no valido");
 		}
 		
 		return ack;

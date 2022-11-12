@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice
-public class CineServiceRestErrorHandler {
+public class CineServiceRestErrorHandler{
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	@ExceptionHandler(HttpMessageNotReadableException.class)
@@ -29,6 +29,16 @@ public class CineServiceRestErrorHandler {
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	protected ResponseEntity<Object> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {		
 		String mensaje = "Solicitud JSON con valores no validos";
+		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje, ex);
+		
+		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + error.getDebugMessage());
+		
+		return new ResponseEntity<>(error, error.getStatus());
+	}
+	
+	@ExceptionHandler(NotValidIdException.class)
+	protected ResponseEntity<Object> handleNotValidIdExceptiont(NotValidIdException ex) {		
+		String mensaje = "Id no encontrado en la base de datos";
 		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje, ex);
 		
 		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + error.getDebugMessage());
