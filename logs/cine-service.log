@@ -3772,6 +3772,7 @@ JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.esta
 2022-11-12 13:54:42.247  INFO 728 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
 2022-11-12 13:54:42.307  INFO 728 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
 =======
+<<<<<<< HEAD
 2022-11-12 14:16:28.173  INFO 19444 --- c.i.c.CineServiceRestApplicationTests          : Starting CineServiceRestApplicationTests using Java 18.0.2.1 on DESKTOP-IG2T4J4 with PID 19444 (started by edugo in C:\opt\wsSTS\cineServiceRest)
 2022-11-12 14:16:28.175  INFO 19444 --- c.i.c.CineServiceRestApplicationTests          : No active profile set, falling back to 1 default profile: "default"
 2022-11-12 14:16:29.003  INFO 19444 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -3779,6 +3780,15 @@ JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.esta
 2022-11-12 14:16:29.829  INFO 19444 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
 2022-11-12 14:16:31.492 ERROR 19444 --- com.zaxxer.hikari.pool.HikariPool              : HikariPool-1 - Exception during pool initialization.
 java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost' to database 'API'
+=======
+2022-11-12 14:23:10.244  INFO 7060 --- c.i.c.CineServiceRestApplicationTests          : Starting CineServiceRestApplicationTests using Java 11.0.16 on DESKTOP-9CHINTB with PID 7060 (started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 14:23:10.265  INFO 7060 --- c.i.c.CineServiceRestApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 14:23:13.567  INFO 7060 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 14:23:13.782  INFO 7060 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 185 ms. Found 2 JPA repository interfaces.
+2022-11-12 14:23:15.730  INFO 7060 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 14:23:19.009 ERROR 7060 --- com.zaxxer.hikari.pool.HikariPool              : HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost' to database 'rest_admin'
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
@@ -3805,8 +3815,15 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:95)
 	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:132)
 	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:132)
+<<<<<<< HEAD
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+=======
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
@@ -3835,6 +3852,7 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+<<<<<<< HEAD
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
@@ -3844,12 +3862,27 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+=======
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+<<<<<<< HEAD
 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+=======
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
@@ -3860,7 +3893,11 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -3870,7 +3907,11 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -3894,12 +3935,21 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+<<<<<<< HEAD
 2022-11-12 14:16:31.563  INFO 19444 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
 2022-11-12 14:16:31.653  INFO 19444 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
 2022-11-12 14:16:31.877  INFO 19444 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
 2022-11-12 14:16:32.015  INFO 19444 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
 2022-11-12 14:16:33.048 ERROR 19444 --- com.zaxxer.hikari.pool.HikariPool              : HikariPool-1 - Exception during pool initialization.
 java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost' to database 'API'
+=======
+2022-11-12 14:23:19.198  INFO 7060 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 14:23:19.460  INFO 7060 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 14:23:20.130  INFO 7060 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 14:23:20.504  INFO 7060 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 14:23:21.580 ERROR 7060 --- com.zaxxer.hikari.pool.HikariPool              : HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost' to database 'rest_admin'
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
@@ -3959,6 +4009,7 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+<<<<<<< HEAD
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
@@ -3968,12 +4019,27 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+=======
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+<<<<<<< HEAD
 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+=======
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
@@ -3984,7 +4050,11 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -3994,7 +4064,11 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -4018,8 +4092,13 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+<<<<<<< HEAD
 2022-11-12 14:16:33.050  WARN 19444 --- o.h.e.j.env.internal.JdbcEnvironmentInitiator  : HHH000342: Could not obtain connection to query metadata
 java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost' to database 'API'
+=======
+2022-11-12 14:23:21.592  WARN 7060 --- o.h.e.j.env.internal.JdbcEnvironmentInitiator  : HHH000342: Could not obtain connection to query metadata
+java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost' to database 'rest_admin'
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:828)
@@ -4079,6 +4158,7 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+<<<<<<< HEAD
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
@@ -4088,12 +4168,27 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+=======
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+<<<<<<< HEAD
 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+=======
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
@@ -4104,7 +4199,11 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -4114,7 +4213,11 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -4138,12 +4241,21 @@ java.sql.SQLSyntaxErrorException: Access denied for user 'rest_admin'@'localhost
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+<<<<<<< HEAD
 2022-11-12 14:16:33.053 ERROR 19444 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 2022-11-12 14:16:33.055  WARN 19444 --- o.s.w.c.support.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 2022-11-12 14:16:33.074  INFO 19444 --- b.a.l.ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2022-11-12 14:16:33.101 ERROR 19444 --- org.springframework.boot.SpringApplication     : Application run failed
+=======
+2022-11-12 14:23:21.611 ERROR 7060 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-11-12 14:23:21.612  WARN 7060 --- o.s.w.c.support.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2022-11-12 14:23:21.649  INFO 7060 --- b.a.l.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-12 14:23:21.751 ERROR 7060 --- org.springframework.boot.SpringApplication     : Application run failed
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
@@ -4169,6 +4281,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+<<<<<<< HEAD
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
@@ -4178,12 +4291,27 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+=======
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+<<<<<<< HEAD
 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+=======
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
@@ -4194,7 +4322,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -4204,7 +4336,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -4256,7 +4392,11 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
 	... 99 common frames omitted
+<<<<<<< HEAD
 2022-11-12 14:16:33.105 ERROR 19444 --- o.s.test.context.TestContextManager            : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5ddcc487] to prepare test instance [com.itq.cineService.CineServiceRestApplicationTests@63e4484d]
+=======
+2022-11-12 14:23:21.761 ERROR 7060 --- o.s.test.context.TestContextManager            : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@119020fb] to prepare test instance [com.itq.cineService.CineServiceRestApplicationTests@2af9a5ef]
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
@@ -4267,6 +4407,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$8(ClassBasedTestDescriptor.java:363)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:368)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$9(ClassBasedTestDescriptor.java:363)
+<<<<<<< HEAD
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
@@ -4276,12 +4417,27 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
 	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
 	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+=======
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:362)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:283)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:282)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:272)
+<<<<<<< HEAD
 	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+=======
+	at java.base/java.util.Optional.orElseGet(Optional.java:369)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:271)
 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:102)
@@ -4292,7 +4448,11 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -4302,7 +4462,11 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+=======
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
@@ -4372,6 +4536,7 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
 	... 99 common frames omitted
+<<<<<<< HEAD
 2022-11-12 14:18:30.132  INFO 5936 --- c.i.c.CineServiceRestApplicationTests          : Starting CineServiceRestApplicationTests using Java 18.0.2.1 on DESKTOP-IG2T4J4 with PID 5936 (started by edugo in C:\opt\wsSTS\cineServiceRest)
 2022-11-12 14:18:30.135  INFO 5936 --- c.i.c.CineServiceRestApplicationTests          : No active profile set, falling back to 1 default profile: "default"
 2022-11-12 14:18:31.038  INFO 5936 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -5330,3 +5495,48 @@ ID no valido
 2022-11-12 15:22:34.118 ERROR 1432 --- c.i.c.endpoint.CineServiceRestErrorHandler     : ERROR: Id no encontrado en la base de datos
 Id no encontrado en la base de datos
 ID no valido
+=======
+2022-11-12 14:28:02.560  INFO 17924 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 17924 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 14:28:02.566  INFO 17924 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 14:28:03.677  INFO 17924 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 14:28:03.764  INFO 17924 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2022-11-12 14:28:04.718  INFO 17924 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 14:28:04.738  INFO 17924 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 14:28:04.739  INFO 17924 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 14:28:04.931  INFO 17924 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 14:28:04.932  INFO 17924 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2260 ms
+2022-11-12 14:28:05.118  INFO 17924 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 14:28:05.651  INFO 17924 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 14:28:05.727  INFO 17924 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 14:28:05.871  INFO 17924 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 14:28:06.294  INFO 17924 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 14:28:06.545  INFO 17924 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 14:28:07.853  INFO 17924 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 14:28:07.873  INFO 17924 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:28:08.362  WARN 17924 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 14:28:08.894  INFO 17924 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 14:28:08.909  INFO 17924 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 7.476 seconds (JVM running for 10.672)
+2022-11-12 14:29:09.537  INFO 17924 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 14:29:10.309  INFO 17924 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 14:29:10.331  INFO 17924 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:29:10.335  INFO 17924 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 14:29:10.365  INFO 17924 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 14:29:28.877  INFO 13016 --- c.i.c.CineServiceRestApplicationTests          : Starting CineServiceRestApplicationTests using Java 11.0.16 on DESKTOP-9CHINTB with PID 13016 (started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 14:29:28.882  INFO 13016 --- c.i.c.CineServiceRestApplicationTests          : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 14:29:31.481  INFO 13016 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 14:29:31.647  INFO 13016 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 127 ms. Found 2 JPA repository interfaces.
+2022-11-12 14:29:33.330  INFO 13016 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 14:29:35.567  INFO 13016 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 14:29:35.877  INFO 13016 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 14:29:36.297  INFO 13016 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 14:29:37.066  INFO 13016 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 14:29:37.579  INFO 13016 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 14:29:39.440  INFO 13016 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 14:29:39.458  INFO 13016 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:29:41.449  WARN 13016 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 14:29:45.799  INFO 13016 --- c.i.c.CineServiceRestApplicationTests          : Started CineServiceRestApplicationTests in 18.028 seconds (JVM running for 20.782)
+2022-11-12 14:29:46.758  INFO 13016 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 14:29:46.765  INFO 13016 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 14:29:46.847  INFO 13016 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+>>>>>>> 93eb364 (Agregar libreria JANSI)
+>>>>>>> 5394eb2 (Agregar libreria JANSI)
