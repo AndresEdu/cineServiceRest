@@ -2943,3 +2943,795 @@ java.sql.SQLException: Check constraint 'CHK_estado_funcion' is violated.
 2022-11-09 12:41:33.308  INFO 672 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-11-09 12:41:33.315  INFO 672 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
 2022-11-09 12:41:33.349  INFO 672 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 11:17:37.510  INFO 10084 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 10084 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 11:17:37.519  INFO 10084 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 11:17:39.995  INFO 10084 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 11:17:40.287  INFO 10084 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 226 ms. Found 2 JPA repository interfaces.
+2022-11-12 11:17:41.636  INFO 10084 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 11:17:41.668  INFO 10084 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 11:17:41.669  INFO 10084 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 11:17:41.999  INFO 10084 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 11:17:42.000  INFO 10084 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4307 ms
+2022-11-12 11:17:42.300  INFO 10084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 11:17:43.363  INFO 10084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 11:17:43.594  INFO 10084 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 11:17:43.917  INFO 10084 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 11:17:44.460  INFO 10084 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 11:17:44.809  INFO 10084 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 11:17:46.818  INFO 10084 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 11:17:46.844  INFO 10084 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 11:17:47.678  WARN 10084 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 11:17:48.527  INFO 10084 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 11:17:48.556  INFO 10084 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 12.328 seconds (JVM running for 16.806)
+2022-11-12 11:19:13.635  INFO 10084 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 11:19:13.639  INFO 10084 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 11:19:13.642  INFO 10084 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 3 ms
+2022-11-12 11:19:15.230  INFO 10084 --- c.i.c.endpoint.CineServiceController           : La sala se ha creado con exito. ID:1, Fecha:  Sat Nov 12 11:17:46 CST 2022
+2022-11-12 11:19:39.355  WARN 10084 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 11:29:34.045  WARN 10084 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 11:34:41.152  WARN 10084 --- com.zaxxer.hikari.pool.HikariPool              : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=57s316ms376µs900ns).
+2022-11-12 11:59:38.417  INFO 10084 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 11:59:39.586  INFO 10084 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 11:59:39.598  INFO 10084 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 11:59:39.652  INFO 10084 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 11:59:39.671  INFO 10084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 11:59:39.719  INFO 10084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:09:37.204  INFO 10688 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 10688 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:09:37.209  INFO 10688 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:09:38.443  INFO 10688 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:09:38.590  INFO 10688 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 121 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:09:39.592  INFO 10688 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:09:39.616  INFO 10688 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:09:39.617  INFO 10688 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:09:39.847  INFO 10688 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:09:39.848  INFO 10688 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2539 ms
+2022-11-12 12:09:40.058  INFO 10688 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:09:40.848  INFO 10688 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:09:41.003  INFO 10688 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:09:41.220  INFO 10688 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:09:41.808  INFO 10688 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:09:42.407  INFO 10688 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:09:43.953  INFO 10688 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:09:44.000  INFO 10688 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:09:44.789  WARN 10688 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:09:45.432  INFO 10688 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:09:45.451  INFO 10688 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 9.294 seconds (JVM running for 12.381)
+2022-11-12 12:09:55.248  INFO 10688 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:09:55.255  INFO 10688 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:09:55.259  INFO 10688 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 3 ms
+2022-11-12 12:11:11.166  INFO 10688 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:11:11.898  INFO 10688 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:11:11.902  INFO 10688 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:11:11.923  INFO 10688 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:11:11.926  INFO 10688 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:11:11.960  INFO 10688 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:11:23.274  INFO 17084 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 17084 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:11:23.279  INFO 17084 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:11:24.195  INFO 17084 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:11:24.268  INFO 17084 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:11:25.003  INFO 17084 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:11:25.018  INFO 17084 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:11:25.019  INFO 17084 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:11:25.186  INFO 17084 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:11:25.187  INFO 17084 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1839 ms
+2022-11-12 12:11:25.363  INFO 17084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:11:25.813  INFO 17084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:11:25.891  INFO 17084 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:11:26.013  INFO 17084 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:11:26.361  INFO 17084 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:11:26.581  INFO 17084 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:11:27.545  INFO 17084 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:11:27.564  INFO 17084 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:11:27.947  WARN 17084 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:11:28.367  INFO 17084 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:11:28.382  INFO 17084 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 5.777 seconds (JVM running for 7.599)
+2022-11-12 12:11:40.702  INFO 17084 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:11:40.703  INFO 17084 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:11:40.706  INFO 17084 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 2 ms
+2022-11-12 12:11:40.865  WARN 17084 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 12:14:32.695  INFO 17084 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:14:33.404  INFO 17084 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:14:33.408  INFO 17084 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:14:33.424  INFO 17084 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:14:33.427  INFO 17084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:14:33.454  INFO 17084 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:14:56.657  INFO 10680 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 10680 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:14:56.661  INFO 10680 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:14:57.495  INFO 10680 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:14:57.566  INFO 10680 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:14:58.223  INFO 10680 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:14:58.238  INFO 10680 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:14:58.238  INFO 10680 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:14:58.387  INFO 10680 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:14:58.389  INFO 10680 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1662 ms
+2022-11-12 12:14:58.542  INFO 10680 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:14:58.949  INFO 10680 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:14:59.019  INFO 10680 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:14:59.122  INFO 10680 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:14:59.429  INFO 10680 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:14:59.613  INFO 10680 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:15:00.510  INFO 10680 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:15:00.524  INFO 10680 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:15:00.913  WARN 10680 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:15:01.394  INFO 10680 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:15:01.409  INFO 10680 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 5.394 seconds (JVM running for 7.18)
+2022-11-12 12:15:06.659  INFO 10680 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:15:06.661  INFO 10680 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:15:06.667  INFO 10680 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 6 ms
+2022-11-12 12:15:19.201  INFO 10680 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:15:19.972  INFO 10680 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:15:19.976  INFO 10680 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:15:19.996  INFO 10680 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:15:19.999  INFO 10680 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:15:20.025  INFO 10680 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:32:29.090  INFO 16912 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 16912 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:32:29.094  INFO 16912 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:32:29.942  INFO 16912 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:32:30.013  INFO 16912 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:32:30.673  INFO 16912 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:32:30.688  INFO 16912 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:32:30.688  INFO 16912 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:32:30.828  INFO 16912 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:32:30.829  INFO 16912 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1668 ms
+2022-11-12 12:32:31.005  INFO 16912 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:32:31.486  INFO 16912 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:32:31.555  INFO 16912 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:32:31.672  INFO 16912 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:32:31.972  INFO 16912 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:32:32.168  INFO 16912 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:32:33.142  INFO 16912 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:32:33.159  INFO 16912 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:32:33.570  WARN 16912 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:32:34.005  INFO 16912 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:32:34.015  INFO 16912 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 5.566 seconds (JVM running for 7.258)
+2022-11-12 12:32:40.553  INFO 16912 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:32:40.554  INFO 16912 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:32:40.557  INFO 16912 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 2 ms
+2022-11-12 12:41:27.184  INFO 16912 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:41:27.895  INFO 16912 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:41:27.899  INFO 16912 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:41:27.922  INFO 16912 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:41:27.925  INFO 16912 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:41:27.957  INFO 16912 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:41:51.663  INFO 11996 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 11996 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:41:51.667  INFO 11996 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:41:52.933  INFO 11996 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:41:53.005  INFO 11996 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:41:53.776  INFO 11996 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:41:53.792  INFO 11996 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:41:53.792  INFO 11996 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:41:53.949  INFO 11996 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:41:53.951  INFO 11996 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2216 ms
+2022-11-12 12:41:54.153  INFO 11996 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:41:54.609  INFO 11996 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:41:54.673  INFO 11996 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:41:54.779  INFO 11996 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:41:55.088  INFO 11996 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:41:55.278  INFO 11996 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:41:56.163  INFO 11996 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:41:56.177  INFO 11996 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:41:56.566  WARN 11996 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:41:57.002  INFO 11996 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:41:57.013  INFO 11996 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 6.55 seconds (JVM running for 8.397)
+2022-11-12 12:42:01.589  INFO 11996 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:42:01.590  INFO 11996 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:42:01.595  INFO 11996 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 3 ms
+2022-11-12 12:42:01.762  WARN 11996 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 12:42:09.788  WARN 11996 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125)): was expecting double-quote to start field name<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 2]]
+2022-11-12 12:42:14.171  WARN 11996 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.itq.cineService.dto.Ack com.itq.cineService.endpoint.CineServiceController.createSala(com.itq.cineService.dto.Sala): [Field error in object 'sala' on field 'estado': rejected value [null]; codes [NotNull.sala.estado,NotNull.estado,NotNull.com.itq.cineService.dto.estadoSala,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [sala.estado,estado]; arguments []; default message [estado]]; default message [no debe ser nulo]] ]
+2022-11-12 12:42:16.527  WARN 11996 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.itq.cineService.dto.Ack com.itq.cineService.endpoint.CineServiceController.createSala(com.itq.cineService.dto.Sala): [Field error in object 'sala' on field 'estado': rejected value [null]; codes [NotNull.sala.estado,NotNull.estado,NotNull.com.itq.cineService.dto.estadoSala,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [sala.estado,estado]; arguments []; default message [estado]]; default message [no debe ser nulo]] ]
+2022-11-12 12:47:01.309  INFO 11996 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:47:02.030  INFO 11996 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:47:02.034  INFO 11996 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:47:02.054  INFO 11996 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:47:02.057  INFO 11996 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:47:02.097  INFO 11996 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:47:13.694  INFO 124 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 124 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:47:13.698  INFO 124 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:47:14.517  INFO 124 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:47:14.589  INFO 124 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:47:15.293  INFO 124 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:47:15.306  INFO 124 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:47:15.307  INFO 124 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:47:15.451  INFO 124 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:47:15.452  INFO 124 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1690 ms
+2022-11-12 12:47:15.598  INFO 124 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:47:16.069  INFO 124 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:47:16.137  INFO 124 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:47:16.229  INFO 124 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:47:16.524  INFO 124 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:47:16.715  INFO 124 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:47:17.660  INFO 124 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:47:17.674  INFO 124 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:47:18.050  WARN 124 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:47:18.466  INFO 124 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:47:18.477  INFO 124 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 5.455 seconds (JVM running for 7.166)
+2022-11-12 12:47:30.255  INFO 124 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:47:30.258  INFO 124 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:47:30.262  INFO 124 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 2 ms
+2022-11-12 12:47:30.418  WARN 124 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 12:47:32.032  WARN 124 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 12:47:33.045  WARN 124 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 12:51:57.458  INFO 124 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:51:58.184  INFO 124 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:51:58.189  INFO 124 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:51:58.208  INFO 124 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:51:58.213  INFO 124 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:51:58.246  INFO 124 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:52:08.068  INFO 5864 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 5864 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:52:08.079  INFO 5864 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:52:08.959  INFO 5864 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:52:09.038  INFO 5864 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:52:09.702  INFO 5864 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:52:09.716  INFO 5864 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:52:09.717  INFO 5864 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:52:09.859  INFO 5864 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:52:09.860  INFO 5864 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1671 ms
+2022-11-12 12:52:10.006  INFO 5864 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:52:10.409  INFO 5864 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:52:10.480  INFO 5864 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:52:10.585  INFO 5864 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:52:10.879  INFO 5864 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:52:11.067  INFO 5864 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:52:11.951  INFO 5864 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:52:11.966  INFO 5864 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:52:12.403  WARN 5864 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:52:12.893  INFO 5864 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:52:12.904  INFO 5864 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 5.518 seconds (JVM running for 7.278)
+2022-11-12 12:52:18.190  INFO 5864 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:52:18.192  INFO 5864 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:52:18.196  INFO 5864 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 3 ms
+2022-11-12 12:52:18.360  WARN 5864 --- .s.w.s.m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.itq.cineService.endpoint.CineServiceRestErrorHandler#handleMethodArgumentNotValid(MethodArgumentNotValidException)
+java.lang.IllegalStateException: Could not resolve parameter [0] in protected org.springframework.http.ResponseEntity<java.lang.Object> com.itq.cineService.endpoint.CineServiceRestErrorHandler.handleMethodArgumentNotValid(org.springframework.web.bind.MethodArgumentNotValidException): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:176)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-11-12 12:52:18.362  WARN 5864 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 12:52:19.971  WARN 5864 --- .s.w.s.m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.itq.cineService.endpoint.CineServiceRestErrorHandler#handleMethodArgumentNotValid(MethodArgumentNotValidException)
+java.lang.IllegalStateException: Could not resolve parameter [0] in protected org.springframework.http.ResponseEntity<java.lang.Object> com.itq.cineService.endpoint.CineServiceRestErrorHandler.handleMethodArgumentNotValid(org.springframework.web.bind.MethodArgumentNotValidException): No suitable resolver
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:176)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-11-12 12:52:19.973  WARN 5864 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])]
+2022-11-12 12:55:41.345  INFO 5864 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:55:42.053  INFO 5864 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:55:42.057  INFO 5864 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:55:42.074  INFO 5864 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:55:42.077  INFO 5864 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:55:42.106  INFO 5864 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:55:59.809  INFO 16616 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 16616 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:55:59.813  INFO 16616 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:56:00.731  INFO 16616 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:56:00.814  INFO 16616 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 69 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:56:01.478  INFO 16616 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:56:01.493  INFO 16616 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:56:01.493  INFO 16616 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:56:01.704  INFO 16616 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:56:01.705  INFO 16616 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1810 ms
+2022-11-12 12:56:01.857  INFO 16616 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:56:02.291  INFO 16616 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:56:02.360  INFO 16616 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:56:02.465  INFO 16616 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:56:02.801  INFO 16616 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:56:02.990  INFO 16616 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:56:03.925  INFO 16616 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:56:03.940  INFO 16616 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:56:04.381  WARN 16616 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:56:04.873  INFO 16616 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:56:04.884  INFO 16616 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 5.678 seconds (JVM running for 7.376)
+2022-11-12 12:56:09.630  INFO 16616 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:56:09.631  INFO 16616 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:56:09.637  INFO 16616 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 2 ms
+2022-11-12 12:56:09.880  WARN 16616 --- .s.w.s.m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.itq.cineService.endpoint.CineServiceRestErrorHandler#handleHttpMessageNotReadableException(HttpMessageNotReadableException)
+org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.util.StreamUtils$NonClosingInputStream]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.util.StreamUtils$NonClosingInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.HashMap["error"]->org.springframework.http.converter.HttpMessageNotReadableException["cause"]->com.fasterxml.jackson.databind.exc.InvalidFormatException["location"]->com.fasterxml.jackson.core.JsonLocation["sourceRef"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:462)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.util.StreamUtils$NonClosingInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.HashMap["error"]->org.springframework.http.converter.HttpMessageNotReadableException["cause"]->com.fasterxml.jackson.databind.exc.InvalidFormatException["location"]->com.fasterxml.jackson.core.JsonLocation["sourceRef"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1300)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:46)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:29)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeFields(MapSerializer.java:808)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:764)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:720)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:35)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1518)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	... 51 common frames omitted
+2022-11-12 12:56:09.886  WARN 16616 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Failure while trying to resolve exception [org.springframework.http.converter.HttpMessageNotReadableException]
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:472)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable(DefaultHandlerExceptionResolver.java:421)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:205)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-11-12 12:56:09.889 ERROR 16616 --- o.a.c.c.C.[.[.[/].[dispatcherServlet]          : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])] with root cause
+com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])
+	at com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67)
+	at com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1991)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1219)
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer._deserializeAltString(EnumDeserializer.java:356)
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer._fromString(EnumDeserializer.java:230)
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer.deserialize(EnumDeserializer.java:198)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-11-12 12:57:07.980  WARN 16616 --- .s.w.s.m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.itq.cineService.endpoint.CineServiceRestErrorHandler#handleHttpMessageNotReadableException(HttpMessageNotReadableException)
+org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.springframework.util.StreamUtils$NonClosingInputStream]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.util.StreamUtils$NonClosingInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.HashMap["error"]->org.springframework.http.converter.HttpMessageNotReadableException["cause"]->com.fasterxml.jackson.databind.exc.InvalidFormatException["location"]->com.fasterxml.jackson.core.JsonLocation["sourceRef"])
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:462)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.springframework.util.StreamUtils$NonClosingInputStream and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: java.util.HashMap["error"]->org.springframework.http.converter.HttpMessageNotReadableException["cause"]->com.fasterxml.jackson.databind.exc.InvalidFormatException["location"]->com.fasterxml.jackson.core.JsonLocation["sourceRef"])
+	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
+	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1300)
+	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:400)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.failForEmpty(UnknownSerializer.java:46)
+	at com.fasterxml.jackson.databind.ser.impl.UnknownSerializer.serialize(UnknownSerializer.java:29)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:774)
+	at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeFields(MapSerializer.java:808)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serializeWithoutTypeInfo(MapSerializer.java:764)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:720)
+	at com.fasterxml.jackson.databind.ser.std.MapSerializer.serialize(MapSerializer.java:35)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1518)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1007)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	... 51 common frames omitted
+2022-11-12 12:57:07.982  WARN 16616 --- o.s.w.s.m.s.DefaultHandlerExceptionResolver    : Failure while trying to resolve exception [org.springframework.http.converter.HttpMessageNotReadableException]
+java.lang.IllegalStateException: Cannot call sendError() after the response has been committed
+	at org.apache.catalina.connector.ResponseFacade.sendError(ResponseFacade.java:472)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.handleHttpMessageNotReadable(DefaultHandlerExceptionResolver.java:421)
+	at org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver.doResolveException(DefaultHandlerExceptionResolver.java:205)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-11-12 12:57:07.984 ERROR 16616 --- o.a.c.c.C.[.[.[/].[dispatcherServlet]          : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])] with root cause
+com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `com.itq.cineService.dto.estadoSala` from String "disponible": not one of the values accepted for Enum class: [DISPONIBLE, RESERVADA, MANTENIMIENTO]
+ at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 5, column: 15] (through reference chain: com.itq.cineService.dto.Sala["estado"])
+	at com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:67)
+	at com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1991)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:1219)
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer._deserializeAltString(EnumDeserializer.java:356)
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer._fromString(EnumDeserializer.java:230)
+	at com.fasterxml.jackson.databind.deser.std.EnumDeserializer.deserialize(EnumDeserializer.java:198)
+	at com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:392)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4674)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3682)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:380)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:343)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:185)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-11-12 12:57:10.551  INFO 16616 --- ionAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-11-12 12:57:11.264  INFO 16616 --- org.apache.catalina.core.StandardService       : Stopping service [Tomcat]
+2022-11-12 12:57:11.268  INFO 16616 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2022-11-12 12:57:11.285  INFO 16616 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:57:11.287  INFO 16616 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown initiated...
+2022-11-12 12:57:11.314  INFO 16616 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Shutdown completed.
+2022-11-12 12:57:23.670  INFO 3712 --- c.itq.cineService.CineServiceRestApplication   : Starting CineServiceRestApplication using Java 11.0.16 on DESKTOP-9CHINTB with PID 3712 (C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest\target\classes started by T460 in C:\Users\T460\workspace-spring-tool-suite-4-4.15.3.RELEASE\cineServiceRest)
+2022-11-12 12:57:23.675  INFO 3712 --- c.itq.cineService.CineServiceRestApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-11-12 12:57:24.510  INFO 3712 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-11-12 12:57:24.587  INFO 3712 --- o.s.d.r.c.RepositoryConfigurationDelegate      : Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2022-11-12 12:57:25.255  INFO 3712 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat initialized with port(s): 8081 (http)
+2022-11-12 12:57:25.268  INFO 3712 --- org.apache.catalina.core.StandardService       : Starting service [Tomcat]
+2022-11-12 12:57:25.269  INFO 3712 --- org.apache.catalina.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2022-11-12 12:57:25.406  INFO 3712 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring embedded WebApplicationContext
+2022-11-12 12:57:25.407  INFO 3712 --- o.s.b.w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1666 ms
+2022-11-12 12:57:25.552  INFO 3712 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Starting...
+2022-11-12 12:57:25.977  INFO 3712 --- com.zaxxer.hikari.HikariDataSource             : HikariPool-1 - Start completed.
+2022-11-12 12:57:26.041  INFO 3712 --- org.hibernate.jpa.internal.util.LogHelper      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-11-12 12:57:26.141  INFO 3712 --- org.hibernate.Version                          : HHH000412: Hibernate ORM core version 5.6.12.Final
+2022-11-12 12:57:26.431  INFO 3712 --- org.hibernate.annotations.common.Version       : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-11-12 12:57:26.626  INFO 3712 --- org.hibernate.dialect.Dialect                  : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-11-12 12:57:27.517  INFO 3712 --- o.h.e.t.j.p.internal.JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-11-12 12:57:27.531  INFO 3712 --- o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-11-12 12:57:27.934  WARN 3712 --- a.o.j.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-12 12:57:28.358  INFO 3712 --- o.s.boot.web.embedded.tomcat.TomcatWebServer   : Tomcat started on port(s): 8081 (http) with context path ''
+2022-11-12 12:57:28.372  INFO 3712 --- c.itq.cineService.CineServiceRestApplication   : Started CineServiceRestApplication in 5.301 seconds (JVM running for 6.991)
+2022-11-12 12:57:32.632  INFO 3712 --- o.a.c.c.C.[Tomcat].[localhost].[/]             : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-12 12:57:32.633  INFO 3712 --- o.s.web.servlet.DispatcherServlet              : Initializing Servlet 'dispatcherServlet'
+2022-11-12 12:57:32.638  INFO 3712 --- o.s.web.servlet.DispatcherServlet              : Completed initialization in 5 ms

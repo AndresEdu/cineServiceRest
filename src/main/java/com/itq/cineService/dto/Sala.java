@@ -5,33 +5,18 @@ package com.itq.cineService.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 /**
  * @author edugo
  *
  *
- *<xs:element name="salaReader">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="idSala" type="xs:int" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="salaCreator">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="Sala" type="tns:Sala" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
  */
 
 @Entity()
@@ -56,10 +41,10 @@ public class Sala {
 	@Column(name="cantColumnas")
 	private int cantColumnas;
 	
-	@NotEmpty
 	@NotNull
 	@Column(name="estado")
-	private String estado;
+	@Enumerated(EnumType.STRING)
+	private estadoSala estado;
 	/**
 	 * @return the idSala
 	 */
@@ -99,13 +84,13 @@ public class Sala {
 	/**
 	 * @return the estado
 	 */
-	public String getEstado() {
+	public estadoSala getEstado() {
 		return estado;
 	}
 	/**
 	 * @param estado the estado to set
 	 */
-	public void setEstado(String estado) {
+	public void setEstado(estadoSala estado) {
 		this.estado = estado;
 	}
 	

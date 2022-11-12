@@ -3,6 +3,13 @@
  */
 package com.itq.cineService.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -12,28 +19,38 @@ import javax.validation.constraints.NotNull;
  * @author edugo
  *
  */
+
+
+
+@Entity()
+@Table(name = "Pelicula")
 public class Pelicula {
 	
-	
-	@NotNull
+	@Id
+	@GeneratedValue
+	@Column(name="idPelicula")
 	private int idPelicula;
 	
 	@NotEmpty
 	@NotNull
+	@Column(name="nombre")
 	private String nombre;
 	
 	
 	@NotNull
 	@Max(200)
 	@Min(60)	
+	@Column(name="duracion")
 	private int duracion;
 	
-	@NotEmpty
 	@NotNull
-	private String clasificacion;
+	@Column(name="clasificacion")
+	@Enumerated(EnumType.STRING)
+	private Clasificacion clasificacion;
 	
 	@NotEmpty
 	@NotNull
+	@Column(name="descripcion")
 	private String descripcion;
 	/**
 	 * @return the idPelicula
@@ -74,13 +91,13 @@ public class Pelicula {
 	/**
 	 * @return the clasificacion
 	 */
-	public String getClasificacion() {
+	public Clasificacion getClasificacion() {
 		return clasificacion;
 	}
 	/**
 	 * @param clasificacion the clasificacion to set
 	 */
-	public void setClasificacion(String clasificacion) {
+	public void setClasificacion(Clasificacion clasificacion) {
 		this.clasificacion = clasificacion;
 	}
 	/**
