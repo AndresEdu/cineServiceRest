@@ -17,7 +17,7 @@ public interface FuncionRepository extends JpaRepository<Funcion, Integer>{
 	
 	@Modifying
 	@Transactional
-	@Query("update Funcion u set u.estado = :estado where u.idFuncion = :id")
-	void setEstadoFuncionById(@Param(value = "estado") estadoFuncion estado, @Param(value = "id") Integer id);
+	@Query("update Funcion u set u.estado = :estado where u.idFuncion = :idFuncion")
+	void setEstadoFuncionById(@Param(value = "estado") estadoFuncion estado, @Param(value = "idFuncion") Integer idFuncion);
 
 }
