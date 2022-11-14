@@ -19,9 +19,9 @@ public class CineServiceRestErrorHandler{
 	@ExceptionHandler(HttpMessageNotReadableException.class)
 	protected ResponseEntity<Object> handleHttpMessageNotReadableException(HttpMessageNotReadableException ex) {		
 		String mensaje = "Solicitud JSON mal construida";
-		ErrorResponse error = new ErrorResponse(HttpStatus.UNPROCESSABLE_ENTITY, mensaje, ex);
+		ErrorResponse error = new ErrorResponse(HttpStatus.UNPROCESSABLE_ENTITY, mensaje);		
 		
-		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + error.getDebugMessage());
+		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
 		
 		return new ResponseEntity<>(error, error.getStatus());
 	}
@@ -29,19 +29,19 @@ public class CineServiceRestErrorHandler{
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	protected ResponseEntity<Object> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {		
 		String mensaje = "Solicitud JSON con valores no validos";
-		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje, ex);
+		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje);		
 		
-		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + error.getDebugMessage());
+		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
 		
 		return new ResponseEntity<>(error, error.getStatus());
 	}
 	
 	@ExceptionHandler(NotValidIdException.class)
 	protected ResponseEntity<Object> handleNotValidIdExceptiont(NotValidIdException ex) {		
-		String mensaje = "Id no encontrado en la base de datos";
-		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje, ex);
+		String mensaje = ex.getMessage();
+		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje);		
 		
-		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + error.getDebugMessage());
+		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
 		
 		return new ResponseEntity<>(error, error.getStatus());
 	}

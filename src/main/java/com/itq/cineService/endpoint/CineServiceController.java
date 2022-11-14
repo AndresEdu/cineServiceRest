@@ -42,14 +42,14 @@ public class CineServiceController {
 	public Sala readSala(@RequestParam(name = "id") String id) throws NotValidIdException {
 		int idSala = Integer.parseInt(id);
 		Sala sala = null;
-		
-		if (salaRepository.existsById(idSala)) {
-		sala = salaRepository.findById(idSala).get();
 
-		logger.debug("Se ha leido la sala con el id: " + id);
-		logger.info("La sala con el ID: " + id + " se ha creado con exito. Fecha:  " + date);
+		if (salaRepository.existsById(idSala)) {
+			sala = salaRepository.findById(idSala).get();
+
+			logger.debug("Se ha leido la sala con el id: " + id);
+			logger.info("La sala con el ID: " + id + " se ha creado con exito. Fecha:  " + date);
 		} else {
-			throw new NotValidIdException("ID no valido");
+			throw new NotValidIdException("Id no encontrado en la base de datos");
 		}
 
 		return sala;
@@ -65,7 +65,7 @@ public class CineServiceController {
 			logger.debug("Se ha leido la funcion con el id: " + id);
 			logger.info("La funcion con el ID: " + id + " se ha creado con exito. Fecha:  " + date);
 		} else {
-			throw new NotValidIdException("ID no valido");
+			throw new NotValidIdException("Id no encontrado en la base de datos");
 		}
 
 		return funcion;
@@ -76,14 +76,14 @@ public class CineServiceController {
 		Ack ack = new Ack();
 
 		int idSala = sala.getIdSala();
-		if (salaRepository.existsById(idSala)) {
+		if (!salaRepository.existsById(idSala)) {
 			salaRepository.save(sala);
 			ack.setCode(200);
 			ack.setDescripcion("Sala creada, ID: " + idSala);
 			logger.debug("Se ha creado la sala exitosamente");
 			logger.info("La sala se ha creado con exito. ID:" + idSala + ", Fecha:  " + date);
 		} else {
-			throw new NotValidIdException("ID no valido");
+			throw new NotValidIdException("Ya existe una sala con ese ID");
 		}
 
 		return ack;
@@ -93,17 +93,12 @@ public class CineServiceController {
 	public Ack createFuncion(@Valid @RequestBody() Funcion funcion) throws NotValidIdException {
 		Ack ack = new Ack();
 
-		int idFuncion = funcion.getIdFuncion();
+		funcionRepository.save(funcion);
+		ack.setCode(200);
+		ack.setDescripcion("Funcion creada");
+		logger.debug("Se ha creado la funcion exitosamente");
+		logger.info("La funcion se ha creado con exito. Fecha:  " + date);
 
-		if (funcionRepository.existsById(idFuncion)) {
-			funcionRepository.save(funcion);
-			ack.setCode(200);
-			ack.setDescripcion("Funcion creada");
-			logger.debug("Se ha creado la funcion exitosamente");
-			logger.info("La funcion se ha creado con exito. ID: " + idFuncion + ", Fecha:  " + date);
-		} else {
-			throw new NotValidIdException("ID no valido");
-		}
 		return ack;
 	}
 
@@ -119,7 +114,7 @@ public class CineServiceController {
 			logger.debug("ID funcion:" + idFuncion + "nuevo estado: " + funcion.getEstado().toString());
 			logger.info("La funcion con ID: " + idFuncion + " se ha modificado con exito., Fecha:  " + date);
 		} else {
-			throw new NotValidIdException("ID no valido");
+			throw new NotValidIdException("Id no encontrado en la base de datos");
 		}
 
 		return ack;
