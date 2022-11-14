@@ -10,8 +10,7 @@ public class ErrorResponse {
 	private HttpStatus status;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
 	private LocalDateTime timestamp;
-	private String message;
-	private String debugMessage;
+	private String message;	
 	//private List<ApiSubError> subErrors;
 	
 	private ErrorResponse() {
@@ -26,15 +25,13 @@ public class ErrorResponse {
 	ErrorResponse(HttpStatus status, Throwable ex) {
 		this();
 		this.status = status;
-		this.message = "Unexpected error";
-		this.debugMessage = ex.getLocalizedMessage();
+		this.message = "Unexpected error";		
 	}
-
-	ErrorResponse(HttpStatus status, String message, Throwable ex) {
+	
+	ErrorResponse(HttpStatus status, String message) {
 		this();
 		this.status = status;
 		this.message = message;
-		this.debugMessage = ex.getLocalizedMessage();
 	}
 
 	
@@ -79,21 +76,6 @@ public class ErrorResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
-	/**
-	 * @return the debugMessage
-	 */
-	public String getDebugMessage() {
-		return debugMessage;
-	}
-
-	/**
-	 * @param debugMessage the debugMessage to set
-	 */
-	public void setDebugMessage(String debugMessage) {
-		this.debugMessage = debugMessage;
-	}
-
 
 
 }
