@@ -33,13 +33,13 @@ public class Sala {
 	@Min(1)	
 	@Max(10)
 	@Column(name="cantFilas")
-	private int cantFilas;
+	private Integer cantFilas;
 	
 	@NotNull
 	@Min(1)	
 	@Max(10)
 	@Column(name="cantColumnas")
-	private int cantColumnas;
+	private Integer cantColumnas;
 	
 	@NotNull
 	@Column(name="estado")

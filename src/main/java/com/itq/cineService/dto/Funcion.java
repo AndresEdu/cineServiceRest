@@ -29,34 +29,34 @@ public class Funcion {
 	@Column(name="idFuncion")
 	private int idFuncion;
 	
-	@NotEmpty
 	@NotNull
-	@Pattern(regexp = "^([0-9]{4}[-][0-9]{2}[-][0-9]{2})$")
+	@NotEmpty
+	@Pattern(regexp = "^([0-9]{4}[-][0-9]{2}[-][0-9]{2})$", message="El formato debe ser yyyy-mm-dd")
 	@Column(name="fecha")
 	private String fecha;
 	
-	@NotEmpty
 	@NotNull
-	@Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$")
+	@NotEmpty
+	@Pattern(regexp = "^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$", message="El formato debe ser hh:mm")
 	@Column(name="hora")
 	private String hora;
 	
 	
 	@NotNull
 	@Column(name="idPelicula")
-	private int idPelicula;
+	private Integer idPelicula;
 
 	
 	@NotNull
 	@Max(3)
 	@Min(1)	
 	@Column(name="idSala")
-	private int idSala;
+	private Integer idSala;
 	
 	
 	@NotNull		
 	@Column(name="costoBoleto")
-	private float costoBoleto;
+	private Float costoBoleto;
 	
 	@NotNull	
 	@Column(name="estado")
