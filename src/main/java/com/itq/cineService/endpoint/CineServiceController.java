@@ -44,15 +44,14 @@ public class CineServiceController {
 		logger.debug("Iniciando método readSala. Fecha: " + date);
 		int idSala = Integer.parseInt(id);
 		Sala sala = null;
-		logger.debug("Id sala: " + idSala);
+		logger.debug("Se intento leer el Id sala: " + idSala +"Fecha: " + date);
 		if (salaRepository.existsById(idSala)) {
 			sala = salaRepository.findById(idSala).get();
-			logger.debug("Sala recuperada con exito de la base de datos.");			
-			logger.info("Se leyo con exito la sala con el ID: " + id );
+			logger.debug("Sala con ID: "+ idSala +" recuperada con exito de la base de datos.");			
+			logger.info("Se leyo con exito la sala con el ID: " + id +".");
 		} else {
-			logger.debug("Termina método readSala. Fecha: " + date);
-			logger.info("Se leyo con exito la sala con el ID: " + id );
-			throw new NotValidIdException("Id no encontrado en la base de datos");
+			logger.debug("Se leyo sin exito la sala con el ID: " + id + "Fecha: "+ date);
+			throw new NotValidIdException("ERROR: Id no encontrado en la base de datos.");
 		}
 		logger.debug("Termina método readSala. Fecha: " + date);
 		return sala;
@@ -64,18 +63,18 @@ public class CineServiceController {
 		logger.debug("Iniciando método readFuncion. Fecha: " + date);
 		
 		int idFuncion = Integer.parseInt(id);
-		logger.debug("idFuncion: "+idFuncion);
+		logger.debug("Iniciando a leer la funcion con el idFuncion: "+idFuncion);
 		
 		Funcion funcion = null;
 
 		if (funcionRepository.existsById(idFuncion)) {		
 			funcion = funcionRepository.findById(idFuncion).get();
-			logger.debug("Funcion recuperada de la base de datos");
-			logger.info("Se leyo la funcion con el ID: " + idFuncion);
+			logger.debug("Funcion con ID: "+ idFuncion+" recuperada de la base de datos.");
+			logger.info("Se leyo la funcion con el ID: " + idFuncion +".");
 		} else {
-			logger.debug("Termina método readFuncion. Fecha: " + date);
-			logger.info("No existe la funcion con el ID: " + idFuncion);			
-			throw new NotValidIdException("Id no encontrado en la base de datos");
+			logger.debug("No se ha podido encontrar la funcion con el idFuncion: "+idFuncion+". Fecha: " + date);
+			logger.info("No existe la funcion con el ID: " + idFuncion);
+			throw new NotValidIdException("ERROR: Id no encontrado en la base de datos");
 		}
 		logger.debug("Termina método readFuncion. Fecha: " + date);
 		return funcion;
@@ -84,7 +83,7 @@ public class CineServiceController {
 	@PostMapping(value = "/cine/sala", consumes = ("application/json"), produces = ("application/json"))
 	public Ack createSala(@Valid @RequestBody() Sala sala) throws NotValidIdException {
 		
-		logger.debug("Iniciando método createSala. Fecha: " + date);
+		logger.debug("DEBUG: Iniciando método createSala. Fecha: " + date);
 		
 		Ack ack = new Ack();
 
@@ -100,8 +99,7 @@ public class CineServiceController {
 					+ "Estado:" + sala.getEstado());
 			logger.info("La sala se ha creado con exito");
 		} else {			
-			logger.debug("Termina método createSala. Fecha: " + date);
-			logger.info("No se puede crear la sala");
+			logger.debug("No se pudo crear la sala. Fecha: " + date);
 			throw new NotValidIdException("Ya existe una sala con ese ID");
 		}
 		logger.debug("Termina método createSala. Fecha: " + date);
@@ -126,7 +124,6 @@ public class CineServiceController {
 				+ "CostoBoleto: "+	Float.toString(f.getCostoBoleto())
 				+ "Estado: "+ f.getEstado());
 		logger.info("La función con id"+ funcion.getIdFuncion() + "se ha creado con exito.");
-		
 		logger.debug("Termina método createFuncion. Fecha: " + date);
 		return ack;
 	}
@@ -137,7 +134,7 @@ public class CineServiceController {
 		logger.debug("Iniciando método putEstadoFuncion. Fecha: " + date);
 		int idFuncion = funcion.getIdFuncion();
 		logger.debug("ID funcion: " + idFuncion);
-		logger.debug("nuevo estado: " + funcion.getEstado());
+		logger.debug("Nuevo estado: " + funcion.getEstado());
 		if (funcionRepository.existsById(idFuncion)) {
 			funcionRepository.setEstadoFuncionById(funcion.getEstado(), idFuncion);
 			ack.setCode(200);
@@ -145,9 +142,8 @@ public class CineServiceController {
 			logger.debug("ID funcion:" + idFuncion + "nuevo estado: " + funcion.getEstado().toString());
 			logger.info("La funcion con ID: " + idFuncion + " se ha modificado con exito, Fecha:  " + date);
 		} else {			
-			logger.info("La funcion con ID: " + idFuncion + "no existe");
-			logger.debug("Termina método putEstadoFuncion, Fecha " + date);
-			throw new NotValidIdException("Id no encontrado en la base de datos");
+			logger.debug("La funcion con ID: " + idFuncion + "no se ha encontrado en la base de datos. Fecha " + date);
+			throw new NotValidIdException("ERROR: Id no encontrado en la base de datos");
 		}
 		logger.debug("Termina método putEstadoFuncion, Fecha: " + date);
 		return ack;

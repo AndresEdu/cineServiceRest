@@ -21,7 +21,7 @@ public class CineServiceRestErrorHandler{
 		String mensaje = "Solicitud JSON mal construida";
 		ErrorResponse error = new ErrorResponse(HttpStatus.UNPROCESSABLE_ENTITY, mensaje);		
 		
-		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
+		logger.error(mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
 		
 		return new ResponseEntity<>(error, error.getStatus());
 	}
@@ -31,7 +31,7 @@ public class CineServiceRestErrorHandler{
 		String mensaje = "Solicitud JSON con valores no validos";
 		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje);		
 		
-		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
+		logger.error(mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
 		
 		return new ResponseEntity<>(error, error.getStatus());
 	}
@@ -41,7 +41,7 @@ public class CineServiceRestErrorHandler{
 		String mensaje = ex.getMessage();
 		ErrorResponse error = new ErrorResponse(HttpStatus.BAD_REQUEST, mensaje);		
 		
-		logger.error("ERROR: " + mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
+		logger.error(mensaje + "\n" + error.getMessage() + "\n" + ex.getLocalizedMessage());
 		
 		return new ResponseEntity<>(error, error.getStatus());
 	}
