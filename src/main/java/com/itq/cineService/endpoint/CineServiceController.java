@@ -40,83 +40,116 @@ public class CineServiceController {
 
 	@GetMapping("/cine/sala")
 	public Sala readSala(@RequestParam(name = "id") String id) throws NotValidIdException {
+		
+		logger.debug("Iniciando método readSala. Fecha: " + date);
 		int idSala = Integer.parseInt(id);
 		Sala sala = null;
-
+		logger.debug("Id sala: " + idSala);
 		if (salaRepository.existsById(idSala)) {
 			sala = salaRepository.findById(idSala).get();
-
-			logger.debug("Se ha leido la sala con el id: " + id);
-			logger.info("La sala con el ID: " + id + " se ha creado con exito. Fecha:  " + date);
+			logger.debug("Sala recuperada con exito de la base de datos.");			
+			logger.info("Se leyo con exito la sala con el ID: " + id );
 		} else {
+			logger.debug("Termina método readSala. Fecha: " + date);
+			logger.info("Se leyo con exito la sala con el ID: " + id );
 			throw new NotValidIdException("Id no encontrado en la base de datos");
 		}
-
+		logger.debug("Termina método readSala. Fecha: " + date);
 		return sala;
 	}
 
 	@GetMapping("/cine/funcion")
 	public Funcion readFuncion(@RequestParam(name = "id") String id) throws NotValidIdException {
+		
+		logger.debug("Iniciando método readFuncion. Fecha: " + date);
+		
 		int idFuncion = Integer.parseInt(id);
+		logger.debug("idFuncion: "+idFuncion);
+		
 		Funcion funcion = null;
 
-		if (funcionRepository.existsById(idFuncion)) {
+		if (funcionRepository.existsById(idFuncion)) {		
 			funcion = funcionRepository.findById(idFuncion).get();
-			logger.debug("Se ha leido la funcion con el id: " + id);
-			logger.info("La funcion con el ID: " + id + " se ha creado con exito. Fecha:  " + date);
+			logger.debug("Funcion recuperada de la base de datos");
+			logger.info("Se leyo la funcion con el ID: " + idFuncion);
 		} else {
+			logger.debug("Termina método readFuncion. Fecha: " + date);
+			logger.info("No existe la funcion con el ID: " + idFuncion);			
 			throw new NotValidIdException("Id no encontrado en la base de datos");
 		}
-
+		logger.debug("Termina método readFuncion. Fecha: " + date);
 		return funcion;
 	}
 
 	@PostMapping(value = "/cine/sala", consumes = ("application/json"), produces = ("application/json"))
 	public Ack createSala(@Valid @RequestBody() Sala sala) throws NotValidIdException {
+		
+		logger.debug("Iniciando método createSala. Fecha: " + date);
+		
 		Ack ack = new Ack();
 
 		int idSala = sala.getIdSala();
 		if (!salaRepository.existsById(idSala)) {
-			salaRepository.save(sala);
+			salaRepository.save(sala);			
 			ack.setCode(200);
-			ack.setDescripcion("Sala creada, ID: " + idSala);
-			logger.debug("Se ha creado la sala exitosamente");
-			logger.info("La sala se ha creado con exito. ID:" + idSala + ", Fecha:  " + date);
-		} else {
+			ack.setDescripcion("Sala creada");
+			logger.debug("Nueva sala:\n"
+					+ "ID: " + Integer.toString(sala.getIdSala()) 
+					+ "CantFilas" + Integer.toString(sala.getCantFilas())
+					+ "CantColumnas" + Integer.toString(sala.getCantColumnas())
+					+ "Estado:" + sala.getEstado());
+			logger.info("La sala se ha creado con exito");
+		} else {			
+			logger.debug("Termina método createSala. Fecha: " + date);
+			logger.info("No se puede crear la sala");
 			throw new NotValidIdException("Ya existe una sala con ese ID");
 		}
-
+		logger.debug("Termina método createSala. Fecha: " + date);
 		return ack;
 	}
 
 	@PostMapping(value = "/cine/funcion", consumes = ("application/json"), produces = ("application/json"))
-	public Ack createFuncion(@Valid @RequestBody() Funcion funcion) throws NotValidIdException {
-		Ack ack = new Ack();
-
-		funcionRepository.save(funcion);
+	public Ack createFuncion(@Valid @RequestBody() Funcion f) {
+		
+		logger.debug("Iniciando método createFuncion. Fecha: " + date);
+		
+		Ack ack = new Ack();	
+		Funcion funcion = funcionRepository.save(f);
 		ack.setCode(200);
-		ack.setDescripcion("Funcion creada");
-		logger.debug("Se ha creado la funcion exitosamente");
-		logger.info("La funcion se ha creado con exito. Fecha:  " + date);
-
+		ack.setDescripcion("Función creada");
+		logger.debug("Nueva función creada:\n"
+				+ "ID " + Integer.toString(funcion.getIdFuncion())
+				+ "Fecha: "+ f.getFecha()
+				+ "Hora: "+ f.getHora()
+				+ "IdPelicula: "+ Integer.toString(f.getIdPelicula())
+				+ "IdSala: "+ Integer.toString(f.getIdSala())
+				+ "CostoBoleto: "+	Float.toString(f.getCostoBoleto())
+				+ "Estado: "+ f.getEstado());
+		logger.info("La función con id"+ funcion.getIdFuncion() + "se ha creado con exito.");
+		
+		logger.debug("Termina método createFuncion. Fecha: " + date);
 		return ack;
 	}
 
 	@PutMapping(value = "/cine/funcion/estado", consumes = ("application/json"), produces = ("application/json"))
 	public Ack putEstadoFuncion(@Valid @RequestBody EstadoFuncionBody funcion) throws NotValidIdException {
 		Ack ack = new Ack();
+		logger.debug("Iniciando método putEstadoFuncion. Fecha: " + date);
 		int idFuncion = funcion.getIdFuncion();
-
+		logger.debug("ID funcion: " + idFuncion);
+		logger.debug("nuevo estado: " + funcion.getEstado());
 		if (funcionRepository.existsById(idFuncion)) {
 			funcionRepository.setEstadoFuncionById(funcion.getEstado(), idFuncion);
 			ack.setCode(200);
 			ack.setDescripcion("Estado modificado");
 			logger.debug("ID funcion:" + idFuncion + "nuevo estado: " + funcion.getEstado().toString());
-			logger.info("La funcion con ID: " + idFuncion + " se ha modificado con exito., Fecha:  " + date);
-		} else {
+			logger.info("La funcion con ID: " + idFuncion + " se ha modificado con exito, Fecha:  " + date);
+		} else {			
+			logger.info("La funcion con ID: " + idFuncion + "no existe");
+			logger.debug("Termina método putEstadoFuncion, Fecha " + date);
 			throw new NotValidIdException("Id no encontrado en la base de datos");
 		}
-
+		logger.debug("Termina método putEstadoFuncion, Fecha: " + date);
 		return ack;
 	}
 }
