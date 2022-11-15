@@ -135,6 +135,7 @@ public class CineServiceController {
 		int idFuncion = funcion.getIdFuncion();
 		logger.debug("ID funcion: " + idFuncion);
 		logger.debug("Nuevo estado: " + funcion.getEstado());
+
 		if (funcionRepository.existsById(idFuncion)) {
 			funcionRepository.setEstadoFuncionById(funcion.getEstado(), idFuncion);
 			ack.setCode(200);

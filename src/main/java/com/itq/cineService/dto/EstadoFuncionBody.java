@@ -5,10 +5,11 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.validation.constraints.NotNull;
 
+
 public class EstadoFuncionBody {
 	
 	@NotNull
-	private int idFuncion;
+	private Integer idFuncion;
 	
 	@NotNull		
 	@Enumerated(EnumType.STRING)
