@@ -7,27 +7,30 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class ErrorResponse {
 
-	private HttpStatus status;
+	private HttpStatus status; // Código de respuesta HTTP 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
-	private LocalDateTime timestamp;
-	private String message;	
-	//private List<ApiSubError> subErrors;
+	private LocalDateTime timestamp; // Fecha y hora cuando ocurrió el error
+	private String message;	// Mensaje descriptivo del error
 	
+	// Constructor base
 	private ErrorResponse() {
 		timestamp = LocalDateTime.now();
 	}
 
+	// Constructor con estado
 	ErrorResponse(HttpStatus status) {
 		this();
 		this.status = status;
 	}
 
+	// Constructor con mensaje específico de la excepción
 	ErrorResponse(HttpStatus status, Throwable ex) {
 		this();
 		this.status = status;
-		this.message = "Unexpected error";		
+		this.message = ex.getMessage();		
 	}
 	
+	// Constructor con mensaje como parámetro
 	ErrorResponse(HttpStatus status, String message) {
 		this();
 		this.status = status;
