@@ -45,15 +45,20 @@ public class CineServiceController {
 		int idSala = Integer.parseInt(id);
 		Sala sala = null;
 		logger.debug("Se intento leer el Id sala: " + idSala +"Fecha: " + date);
+		
+		//Revisar si existe una sala en la base de datos con el id ingreso
 		if (salaRepository.existsById(idSala)) {
+			//Obtener la sala de la base de datos
 			sala = salaRepository.findById(idSala).get();
 			logger.debug("Sala con ID: "+ idSala +" recuperada con exito de la base de datos.");			
 			logger.info("Se leyo con exito la sala con el ID: " + id +".");
 		} else {
 			logger.debug("Se leyo sin exito la sala con el ID: " + id + "Fecha: "+ date);
+			//Levantar una excepción si el id no se encuentra en la base de datos
 			throw new NotValidIdException("ERROR: Id no encontrado en la base de datos.");
 		}
 		logger.debug("Termina método readSala. Fecha: " + date);
+		// Regresar la sala como response 
 		return sala;
 	}
 
@@ -66,17 +71,20 @@ public class CineServiceController {
 		logger.debug("Iniciando a leer la funcion con el idFuncion: "+idFuncion);
 		
 		Funcion funcion = null;
-
-		if (funcionRepository.existsById(idFuncion)) {		
+		//Verificar que exista la función en la base de datos
+		if (funcionRepository.existsById(idFuncion)) {
+			//Obtener la función de la base de datos
 			funcion = funcionRepository.findById(idFuncion).get();
 			logger.debug("Funcion con ID: "+ idFuncion+" recuperada de la base de datos.");
 			logger.info("Se leyo la funcion con el ID: " + idFuncion +".");
 		} else {
 			logger.debug("No se ha podido encontrar la funcion con el idFuncion: "+idFuncion+". Fecha: " + date);
 			logger.info("No existe la funcion con el ID: " + idFuncion);
+			//Levantar una excepción si la función no se encuentra 
 			throw new NotValidIdException("ERROR: Id no encontrado en la base de datos");
 		}
 		logger.debug("Termina método readFuncion. Fecha: " + date);
+		//Regresar la función como response
 		return funcion;
 	}
 
@@ -88,7 +96,9 @@ public class CineServiceController {
 		Ack ack = new Ack();
 
 		int idSala = sala.getIdSala();
+		//Verificar que no existe una sala con ese id
 		if (!salaRepository.existsById(idSala)) {
+			//Guardar la sala en la base de datos
 			salaRepository.save(sala);			
 			ack.setCode(200);
 			ack.setDescripcion("Sala creada");
@@ -100,9 +110,11 @@ public class CineServiceController {
 			logger.info("La sala se ha creado con exito");
 		} else {			
 			logger.debug("No se pudo crear la sala. Fecha: " + date);
+			//Levantar excepción cuando ya existe el ID
 			throw new NotValidIdException("Ya existe una sala con ese ID");
 		}
 		logger.debug("Termina método createSala. Fecha: " + date);
+		// Regresar mensaje exitoso como response
 		return ack;
 	}
 
@@ -111,7 +123,8 @@ public class CineServiceController {
 		
 		logger.debug("Iniciando método createFuncion. Fecha: " + date);
 		
-		Ack ack = new Ack();	
+		Ack ack = new Ack();
+		//Guardar función en la base de datos
 		Funcion funcion = funcionRepository.save(f);
 		ack.setCode(200);
 		ack.setDescripcion("Función creada");
@@ -125,6 +138,7 @@ public class CineServiceController {
 				+ "Estado: "+ f.getEstado());
 		logger.info("La función con id"+ funcion.getIdFuncion() + "se ha creado con exito.");
 		logger.debug("Termina método createFuncion. Fecha: " + date);
+		// Regresar mensaje exitoso como response
 		return ack;
 	}
 
@@ -135,8 +149,10 @@ public class CineServiceController {
 		int idFuncion = funcion.getIdFuncion();
 		logger.debug("ID funcion: " + idFuncion);
 		logger.debug("Nuevo estado: " + funcion.getEstado());
-
+		
+		//Verificar que la función exista en la base de datos
 		if (funcionRepository.existsById(idFuncion)) {
+			//Cambiar el estado de la función
 			funcionRepository.setEstadoFuncionById(funcion.getEstado(), idFuncion);
 			ack.setCode(200);
 			ack.setDescripcion("Estado modificado");
@@ -144,9 +160,11 @@ public class CineServiceController {
 			logger.info("La funcion con ID: " + idFuncion + " se ha modificado con exito, Fecha:  " + date);
 		} else {			
 			logger.debug("La funcion con ID: " + idFuncion + "no se ha encontrado en la base de datos. Fecha " + date);
+			//Levantar excepción si no existe la función
 			throw new NotValidIdException("ERROR: Id no encontrado en la base de datos");
 		}
 		logger.debug("Termina método putEstadoFuncion, Fecha: " + date);
+		//Regresar mensaje de exito como response
 		return ack;
 	}
 }

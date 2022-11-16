@@ -12,6 +12,11 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+/*
+ * FuncionRepository es un intermediario
+ * para hacer las operaciones sobre 
+ * funciones en la base de datos
+ */
 @Repository
 public interface FuncionRepository extends JpaRepository<Funcion, Integer>{
 	
