@@ -15,7 +15,7 @@
 	</appender>
 	
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>${LOGS}/cine-service.log</file>
+		<file>${LOGS:-}/cine-service.log</file>
 		
 
 		<encoder>
